@@ -1,0 +1,60 @@
+header {
+  background-color: var(--container-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+.nav {
+	display: flex;
+	height: var(--header-height);
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-logo {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+.nav-logo span {
+	color: var(--primer-color);
+}
+@media screen and (max-width:1023px) {
+	.nav-menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: hsla(0,0%, 10%, .3);
+		width: 75%;
+		height: 100%;
+		padding: 4.5rem 0 0 3rem;
+		backdrop-filter: blur(24px);
+		-webkit-backdrop-filter: blur(24px);
+		transition: right .4s;
+	}
+}
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+.nav-item {
+	color: var(--text-color);
+	font-weight: var(--font-semibold);
+}
+.btn-toggle,.btn-close {
+	background-color: var(--container-color);
+	color: var(--primer-color);
+	cursor: pointer;
+	font-size: var(--bigger-fs);
+}
+.btn-close {
+	background-color: transparent;
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+}
+.show {
+	right: 0;
+	transition: right .4s;
+}

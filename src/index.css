@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --header-height: 3.5rem;
+  /* variables de colores */
+  /* HSL (hue, saturacion, lightness (brillo)*/
+  /* alternativas de colores: 
+   Naranja: hsl(14, 100%, 65%) - Azul: hsl(210, 100%, 70%)
+   Rosa: hsl(356, 100%, 75%) - Purpura: hsl(250, 100%, 75%)
+  */
+  --hue: 183;
+  --primer-color: hsl(var(--hue), 65%, 45%);
+  --primer-color-alt: hsl(var(--hue), 30%, 55%);
+  --title-color: hsl(184, 89%, 89%);
+  --text-color: hsl(0, 0%, 93%);
+  --body-color: hsl(219, 13%, 22%);
+  --container-color: hsl(216, 19%, 16%);
+
+  /* fuente y tipografia */
+  --body-font: "Roboto", sans-serif;
+  --biggest-fs: 2rem;
+  --bigger-fs: 1.25rem;
+  --h1-fs: 1.5rem;
+  --h2-fs: 1.25rem;
+  --h3-fs: 1rem;
+  --normal-fs: 0.938rem;
+  --small-fs: 0.813rem;
+  --smaller-fs: 0.75rem;
+  /* font weight*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  /* z-index*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-fs: 4rem;
+    --bigger-fs: 2rem;
+    --h1-fs: 2.25rem;
+    --h2-fs: 1.5rem;
+    --h3-fs: 1.25rem;
+    --normal-fs: 1rem;
+    --small-fs: 0.875rem;
+    --smaller-fs: 0.813rem;
+  }
+}
+input,
+textarea,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-fs);
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+body.lightTheme {
+  background-color: var(--bg-color);
+  color: var(--title-dark);
+}
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--primer-color);
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+/* clases reusables*/
+.button-pri {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primer-color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: var(--font-medium);
+  padding: .5rem .8rem;
+}
+.button-pri:hover {
+  box-shadow: 0 0 5px var(--primer-color);
+  transition: all .4s;
+}
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.section {
+  padding-block: 5rem 2rem;
+}
+.section-title,
+.section-subtitle {
+  margin-block: 1rem;
+  text-align: center;
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+.section-title {
+  font-size: var(--h1-fs);
+  margin-bottom: 1.5rem;
+}
+.section-subtitle {
+  font-size: var(--normal-fs);
+  margin-bottom: 0.25rem;
+}
+.section-subtitle span {
+  color: var(--primer-color);
+}
+.main {
+  overflow: hidden; /*scrollReveal*/
+}
